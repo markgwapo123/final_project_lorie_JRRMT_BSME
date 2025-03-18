@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enrollment Form - Southland College</title>
+  <style>
+    /* General Reset & Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #240c2e;
+  font-weight: bolder;
+  height: 80px;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid #ff9800;
+}
+
+.logo img {
+  height: 100%;
+  max-height: 70px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+#secsa {
+  color: rgb(236, 232, 232);
+  margin-left: 10px;
+  font-size: x-large;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: #ff9800;
+  text-decoration: underline;
+}
+
+.links a.active-page {
+  color: #ff9800;
+  text-decoration: underline;
+}
+
+/* Burger Button */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Hide the logo */
+  .logo {
+    display: none;
+  }
+
+
+  .menu-icon {
+    display: flex;
+  }
+
+  
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #240c2e;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    gap: 20px;
+  }
+
+
+  .links.active {
+    display: flex;
+  }
+}
+/* -------------------------------------------------------------------------------------------------------------------------- */
+
+    main {
+      padding: 2rem 5%;
+    }
+    h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 85px;
+    color: #6c5ce7;
+    text-shadow: -1px -1px 0 #ff9800, 1px -1px 0 #ff9800, -1px 1px 0 #ff9800, 1px 1px 0 #ff9800;
+    font-size: xxx-large;
+}
+    /* Form container */
+    .form-container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form label {
+      margin: 1rem 0 0.5rem;
+      font-weight: bold;
+    }
+
+    form input,
+    form select,
+    form textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    form button {
+      padding: 0.8rem 1.5rem;
+      background: #6c5ce7;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background: #a29bfe;
+    }
+
+
+
+    #section3 {
+  height: 75vh; /* Set section height to 100% of the viewport height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.contact-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.contact-left {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Triangle Positioning */
+.contact-left img:nth-child(1) {
+  grid-column: 1 / 3; 
+}
+
+.contact-left img:nth-child(2) {
+  grid-column: 1 / 2; 
+}
+
+.contact-left img:nth-child(3) {
+  grid-column: 2 / 3; 
+}
+
+.contact-left img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain; 
+}
+
+.contact-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contact-top div {
+  flex: 1;
+}
+
+p {
+  margin: 5px 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.map-container iframe {
+  width: 92%;
+  height: 250px; 
+  border: 0;
+  border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+  #section3 {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+  }
+
+
+  .contact-left {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 10px;
+    width: 100%; 
+  }
+
+  .contact-left img {
+    width: 100px; 
+    height: 100px;
+    object-fit: contain;
+  }
+
+
+  .contact-right {
+    flex: none; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; 
+    width: 100%; 
+    text-align: center; 
+  }
+
+  .contact-top {
+    flex-direction: column; 
+    gap: 15px;
+  }
+
+  .social-icons {
+    justify-content: center; 
+  }
+
+
+  .map-container iframe {
+    width: 100%; 
+    height: 200px; 
+  }
+}
+
+
+
+    /* Footer General Styles */
+footer {
+  border-top:1px solid #ff9800;
+    background-color: #240c2e; 
+    color: #fff;
+    padding: 20px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .contact-left,
+  .contact-middle,
+  .contact-right {
+    margin-bottom: 20px;
+  }
+  
+  footer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  footer p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  /* Footer Bottom */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .form-container {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../assets/sclogo_V1.png" alt="Logo" width="80" />
+        <h2 id="secsa">SECSA</h2>
+      </div>
+      <!-- Burger button -->
+      <div class="menu-icon" id="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="links" id="nav-links">
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="../administration/administration.html">ADMISSIONS</a></li>
+        <li><a href="../scholarship/scholarship.html">SCHOLARSHIPS</a></li>
+        <li><a href="enrollment.html"  class="active-page">ENROLL NOW!</a></li>
+        <li><a href="../about/about.html">ABOUT US</a></li>
+        <li><a href="#section3">CONTACT</a></li>
+        <li><a href="../admin/login.html">ADMIN</a></li>
+      </ul>
+    </nav>
+    <script>
+      const menuIcon = document.getElementById("menu-icon");
+      const navLinks = document.getElementById("nav-links");
+    
+      menuIcon.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+    
+  </header>
+  
+  <main>
+    <h1 id="EF">Enrollment Form</h1>
+
+    <div class="form-container">
+      <form action="submit-enrollment.php" method="POST">
+        <!-- Form fields as before -->
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required />
+    
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required />
+    
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+    
+        <label for="contact_number">Contact Number</label>
+        <input type="tel" id="contact_number" name="contact_number" placeholder="Enter your contact number" required />
+    
+        <label for="preferred_course">Preferred Course</label>
+        <select id="preferred_course" name="preferred_course" required>
+            <option value="">Select your preferred course</option>
+            <option value="BSME"> Bachelor of Science in Mechanical Engineering </option>
+
+        </select>
+    
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" placeholder="Enter your complete address" required></textarea>
+    
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+
+
+  </main>
+
+  <section id="section3">
+    <!-- Left: Logo -->
+    <div class="contact-left">
+      <img src="../assets/sclogo.png" alt="Southland College Logo">
+      <img src="../assets/sclogo_V1.png" alt="Southland College Logo">
+      <img src="../assets/bsmelogo.png" alt="Southland College Logo">
+    </div>
+  
+    <!-- Right: Content -->
+    <div class="contact-right">
+      <!-- Top Section: Contact Details -->
+      <div class="contact-top">
+        <div>
+          <h2>Contact Us</h2>
+          <p><strong>Phone:</strong> +63 34 4713399</p>
+          <p><strong>Email:</strong> southalandcollge.edu.ph</p>
+          <p><strong>Alternative Email:</strong> southalandcollge.edu.ph</p>
+        </div>
+        <div>
+          <h2>Address</h2>
+          <p>Rizal St., Kabankalan City 6111<br>Negros Occidental, Philippines</p>
+        </div>
+        <div>
+          <h2>Like us on Social Media</h2>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/SouthlandCollegeKabankalan" target="_blank">
+              <img src="../assets/facebook.png" alt="Facebook">Facebook
+            </a> <br>
+            <a href="https://www.instagram.com/southland_college_philippines/" target="">
+              <img src="../assets/insta.png" alt="ig">Instagram
+            </a>
+            <a href="https://southlandcollege.edu.ph/" target="">
+              <img src="../assets/gmail.png" alt="gmail">Gmail
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Bottom Section: Map -->
+      <div class="map-container" style="display: contents;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2650.26185412388!2d122.82033784796026!3d9.98336579176549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33ac113abdc74dc7%3A0xfd31dde515e4c24!2sFellowship%20Baptist%20College!5e1!3m2!1sen!2sph!4v1733124889265!5m2!1sen!2sph"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>&copy; 2024 JRRMT Works. All rights reserved.</p>
+      </div>
+
+     
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

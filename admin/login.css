@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .admin-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .login-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .logo-container {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .logo {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+  }
+  
+  .login-card h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  /* Input Group */
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Button */
+  .btn-submit {
+    background-color: #2c1735;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .btn-submit:hover {
+    background-color: #db6d14;
+  }
+  

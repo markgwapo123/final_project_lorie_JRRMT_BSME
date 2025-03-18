@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="assets/sclogo_V1.png" alt="Logo" width="80" />
+          <h2 id="secsa">SECSA</h2>
+        </div>
+        <!-- Burger button -->
+        <div class="menu-icon" id="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="links" id="nav-links">
+          <li><a href="#section1" class="active-page">HOME</a></li>
+          <li><a href="./administration/administration.html">ADMISSIONS</a></li>
+          <li><a href="./scholarship/scholarship.html">SCHOLARSHIPS</a></li>
+          <li><a href="./enrollment/enrollment.html">ENROLL NOW!</a></li>
+          <li><a href="./about/about.html">ABOUT US</a></li>
+          <li><a href="#section3">CONTACT</a></li>
+          <li><a href="./admin/login.html">ADMIN</a></li>
+        </ul>
+      </nav>
+      <script>
+        const menuIcon = document.getElementById("menu-icon");
+        const navLinks = document.getElementById("nav-links");
+      
+        menuIcon.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+        });
+      </script>
+      
+    </header>
+    
+
+    <main>
+      <!-- Section 1: Full Image -->
+      <section id="section1" class="section image-only">
+        <!-- Example Image Tag -->
+<img src="assets/SOUTHLAND COLLEGE (1).png" alt="Southland College Logo" class="responsive-image">
+
+      </section>
+
+      <!-- Section 2: Content Section -->
+      <section id="section2" class="section">
+        <div class="container">
+          <h2 class="title" style="color:#6c5ce7">Bachelor of Science in Mechanical Engineering</h2>
+          <div class="description">
+            <p>
+              Mechanical engineering concerns itself with mechanical design,
+              energy conversion, fuel, combustion technologies, heat transfer,
+              materials, noise control, acoustics, manufacturing processes, rail
+              transportation, automatic control, product safety, reliability,
+              and solar energy and technological impacts on society.
+            </p>
+            <p>
+              The Bachelor of Science in Mechanical Engineering requires a solid
+              understanding of fundamental concepts such as mechanics, dynamics,
+              thermodynamics, materials science, structural analysis, and
+              electricity. Mechanical engineers design and analyze manufacturing
+              plants, industrial equipment and machinery, heating and cooling
+              systems, transportation systems, aircraft, watercraft, robotics,
+              and more.
+            </p>
+          </div>
+          <div class="sections">
+            <div class="card">
+              <h3 style="color:#6c5ce7">Program Outcomes</h3>
+              <ul>
+                <li>
+                  Apply knowledge of mathematics and science to solve complex
+                  problems.
+                </li>
+                <li>
+                  Design and conduct experiments, analyze and interpret data.
+                </li>
+                <li>Design systems and processes to meet desired needs.</li>
+                <li>
+                  Work effectively in multidisciplinary and multicultural teams.
+                </li>
+                <li>Understand professional and ethical responsibilities.</li>
+                <li>Communicate effectively in professional settings.</li>
+                <li>
+                  Engage in lifelong learning and understand contemporary
+                  issues.
+                </li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3 style="color:#6c5ce7">Work Opportunities</h3>
+              <ul>
+                <li>Project Management</li>
+                <li>Building Engineer</li>
+                <li>HVAC Engineer</li>
+                <li>Refrigeration Maintenance Engineer</li>
+                <li>Automotive Engineer</li>
+                <li>Drafting and Design</li>
+                <li>Production Engineer</li>
+                <li>Power Plant Design</li>
+              </ul>
+            </div>
+          </div>
+          <div class="sections">
+            <div class="card">
+              <h3 style="color:#6c5ce7">Mission</h3>
+              <p>
+                Southland College School of Engineering, Computer Studies and
+                Architecture (SECSA) aims to provide services to the students by
+                conducting quality research and activities and disseminating and
+                preserving technical knowledge relative to engineering, computer
+                studies, and architecture.
+              </p>
+            </div>
+            <div class="card">
+              <h3 style="color:#6c5ce7;">Vision</h3>
+              <p>
+                To be recognized inside the college as an active department
+                assisting students towards greater achievement in their chosen
+                field.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <section id="section3">
+        <!-- Left: Logo -->
+        <div class="contact-left">
+          <img src="assets/sclogo.png" alt="Southland College Logo">
+          <img src="assets/sclogo_V1.png" alt="Southland College Logo">
+          <img src="assets/bsmelogo.png" alt="Southland College Logo">
+        </div>
+      
+        <!-- Right: Content -->
+        <div class="contact-right">
+          <!-- Top Section: Contact Details -->
+          <div class="contact-top">
+            <div>
+              <h2>Contact Us</h2>
+              <p><strong>Phone:</strong> +63 34 4713399</p>
+              <p><strong>Email:</strong> southalandcollge.edu.ph</p>
+              <p><strong>Alternative Email:</strong> southalandcollge.edu.ph</p>
+            </div>
+            <div>
+              <h2>Address</h2>
+              <p>Rizal St., Kabankalan City 6111<br>Negros Occidental, Philippines</p>
+            </div>
+            <div>
+              <h2>Like us on Social Media</h2>
+              <div class="social-icons">
+                <a href="https://www.facebook.com/SouthlandCollegeKabankalan" target="_blank">
+                  <img src="assets/facebook.png" alt="Facebook">Facebook
+                </a> <br>
+                <a href="https://www.instagram.com/southland_college_philippines/" target="">
+                  <img src="assets/insta.png" alt="ig">Instagram
+                </a>
+                <a href="https://southlandcollege.edu.ph/" target="">
+                  <img src="assets/gmail.png" alt="gmail">Gmail
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Bottom Section: Map -->
+          <div class="map-container" style="display: contents;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2650.26185412388!2d122.82033784796026!3d9.98336579176549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33ac113abdc74dc7%3A0xfd31dde515e4c24!2sFellowship%20Baptist%20College!5e1!3m2!1sen!2sph!4v1733124889265!5m2!1sen!2sph"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+     
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <p>&copy; 2024 JRRMT Works. All rights reserved.</p>
+        </div>
+
+       
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

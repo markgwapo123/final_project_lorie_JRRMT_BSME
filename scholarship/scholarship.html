@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Southland College Scholarships</title>
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    /* Navbar Styles */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #240c2e;
+      font-weight: bolder;
+      height: 80px;
+      padding: 0 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      border-bottom: 1px solid #ff9800;
+    }
+
+    .logo img {
+      height: 100%;
+      max-height: 70px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    #secsa {
+      color: rgb(236, 232, 232);
+      margin-left: 10px;
+      font-size: x-large;
+    }
+
+    .links {
+      display: flex;
+      list-style: none;
+      gap: 15px;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 5px 10px;
+      transition: color 0.3s;
+    }
+
+    .links a:hover {
+      color: #ff9800;
+      text-decoration: underline;
+    }
+
+    .links a.active-page {
+      color: #ff9800;
+      text-decoration: underline;
+    }
+
+    /* Burger Button */
+    .menu-icon {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-icon span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media screen and (max-width: 768px) {
+      .logo {
+        display: none;
+      }
+
+      .menu-icon {
+        display: flex;
+      }
+
+      .links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: #240c2e;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        gap: 20px;
+      }
+
+      .links.active {
+        display: flex;
+      }
+    }
+
+    /* ------------------------------------------------------------------------------------------------------------------ */
+    #section3 {
+  height: 75vh; /* Set section height to 100% of the viewport height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.contact-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.contact-left {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Triangle Positioning */
+.contact-left img:nth-child(1) {
+  grid-column: 1 / 3; 
+}
+
+.contact-left img:nth-child(2) {
+  grid-column: 1 / 2; 
+}
+
+.contact-left img:nth-child(3) {
+  grid-column: 2 / 3; 
+}
+
+.contact-left img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain; 
+}
+
+.contact-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contact-top div {
+  flex: 1;
+}
+
+p {
+  margin: 5px 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.map-container iframe {
+  width: 92%;
+  height: 250px; 
+  border: 0;
+  border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+  #section3 {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+  }
+
+
+  .contact-left {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 10px;
+    width: 100%; 
+  }
+
+  .contact-left img {
+    width: 100px; 
+    height: 100px;
+    object-fit: contain;
+  }
+
+
+  .contact-right {
+    flex: none; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; 
+    width: 100%; 
+    text-align: center; 
+  }
+
+  .contact-top {
+    flex-direction: column; 
+    gap: 15px;
+  }
+
+  .social-icons {
+    justify-content: center; 
+  }
+
+
+  .map-container iframe {
+    width: 100%; 
+    height: 200px; 
+  }
+}
+
+
+    /* ----------------------------------------------------------------------------------------------------------------- */
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 115px;
+    }
+
+    #LSAP {
+      color: #6c5ce7;
+    text-shadow: -1px -1px 0 #ff9800, 1px -1px 0 #ff9800, -1px 1px 0 #ff9800, 1px 1px 0 #ff9800;
+    font-size: xxx-large;
+    text-align: center;
+    }
+
+    .list {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+
+    .list li {
+      margin: 0.5rem 0;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #4834d4;
+      margin-top: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .highlight {
+      color: #6c5ce7;
+      font-weight: bold;
+    }
+
+    .contact {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .contact p {
+      margin: 0.5rem 0;
+      color: #555;
+    }
+
+    .contact a {
+      color: #6c5ce7;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      border-top: 1px solid #ff9800;
+      background-color: #240c2e;
+      color: #fff;
+      padding: 20px 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    #footer{
+      text-align: center;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../assets/sclogo_V1.png" alt="Logo" width="80" />
+        <h2 id="secsa">SECSA</h2>
+      </div>
+      <!-- Burger button -->
+      <div class="menu-icon" id="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="links" id="nav-links">
+        <li><a href="../index.html" >HOME</a></li>
+        <li><a href="../administration/administration.html">ADMISSIONS</a></li>
+        <li><a href="scholarship.html" class="active-page">SCHOLARSHIPS</a></li>
+        <li><a href="../enrollment/enrollment.html">ENROLL NOW!</a></li>
+        <li><a href="../about/about.html">ABOUT US</a></li>
+        <li><a href="#section3">CONTACT</a></li>
+        <li><a href="../admin/login.html">ADMIN</a></li>
+      </ul>
+    </nav>
+    <script>
+      const menuIcon = document.getElementById("menu-icon");
+      const navLinks = document.getElementById("nav-links");
+
+      menuIcon.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h2 id="LSAP">𝐋𝐈𝐒𝐓 𝐎𝐅 𝐒𝐂𝐇𝐎𝐋𝐀𝐑𝐒𝐇𝐈𝐏𝐒 𝐀𝐍𝐃 𝐏𝐑𝐈𝐕𝐈𝐋𝐄𝐆𝐄𝐒</h2>
+    <p>Southland College is committed to making <span class="highlight">quality education accessible</span> to deserving students. Below are the scholarships, grants, and benefits available for the <span class="highlight">1st Semester AY 2024-2025</span>.</p>
+
+    <!-- Scholarships -->
+    <div>
+      <p class="section-title">Scholarships:</p>
+      <ul class="list">
+        <li>Academic Scholarship</li>
+        <li>Entrance Scholarship</li>
+        <li>Sports/Cultural Scholarship</li>
+      </ul>
+    </div>
+
+    <!-- Privileges -->
+    <div>
+      <p class="section-title">Privileges:</p>
+      <ul class="list">
+        <li>Barkadahan Privilege</li>
+        <li>Loyalty Privilege</li>
+        <li>Provincial Grant</li>
+        <li>Siblings Privilege</li>
+        <li>Retired Military/PNP Kids Privilege</li>
+        <li>Church Worker Privilege</li>
+        <li>PWD Privilege</li>
+        <li>Transferee Privilege</li>
+      </ul>
+    </div>
+
+    <!-- Benefits -->
+    <div>
+      <p class="section-title">Benefits:</p>
+      <ul class="list">
+        <li>SSG President/South Quill EIC Benefit</li>
+        <li>College SSG Officers Benefit</li>
+        <li>South Quill Editorial Staff Benefit</li>
+        <li>Student Assistant Benefit</li>
+        <li>SC Employees Benefit</li>
+      </ul>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="contact">
+      <p>For inquiries, please visit the:</p>
+      <p><strong>Student Affairs and Services Office</strong> or <strong>Scholarship Services Office</strong></p>
+      <p>Main Campus, Southland College</p>
+      <p>or message us on our <a href="https://www.facebook.com/SouthlandCollegeKabankalan">Facebook Page</a>.</p>
+    </div>
+  </div>
+
+  <section id="section3">
+    <!-- Left: Logo -->
+    <div class="contact-left">
+      <img src="../assets/sclogo.png" alt="Southland College Logo">
+      <img src="../assets/sclogo_V1.png" alt="Southland College Logo">
+      <img src="../assets/bsmelogo.png" alt="Southland College Logo">
+    </div>
+  
+    <!-- Right: Content -->
+    <div class="contact-right">
+      <!-- Top Section: Contact Details -->
+      <div class="contact-top">
+        <div>
+          <h2>Contact Us</h2>
+          <p><strong>Phone:</strong> +63 34 4713399</p>
+          <p><strong>Email:</strong> southalandcollge.edu.ph</p>
+          <p><strong>Alternative Email:</strong> southalandcollge.edu.ph</p>
+        </div>
+        <div>
+          <h2>Address</h2>
+          <p>Rizal St., Kabankalan City 6111<br>Negros Occidental, Philippines</p>
+        </div>
+        <div>
+          <h2>Like us on Social Media</h2>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/SouthlandCollegeKabankalan" target="_blank">
+              <img src="../assets/facebook.png" alt="Facebook">Facebook
+            </a> <br>
+            <a href="https://www.instagram.com/southland_college_philippines/" target="">
+              <img src="../assets/insta.png" alt="ig">Instagram
+            </a>
+            <a href="https://southlandcollege.edu.ph/" target="">
+              <img src="../assets/gmail.png" alt="gmail">Gmail
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Bottom Section: Map -->
+      <div class="map-container" style="display: contents;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2650.26185412388!2d122.82033784796026!3d9.98336579176549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33ac113abdc74dc7%3A0xfd31dde515e4c24!2sFellowship%20Baptist%20College!5e1!3m2!1sen!2sph!4v1733124889265!5m2!1sen!2sph"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p id="footer">&copy; 2024 JRRMT Works. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
